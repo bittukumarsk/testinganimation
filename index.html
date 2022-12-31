@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="CeleButton()">
+        <img src="https://www.google.com/logos/fnbx/new_years/icon_popped_2021.png" id="Image" style="display: none;">
+        <img src="https://www.google.com/logos/fnbx/new_years/icon_idle_2021_dm.gif" id="Gif">
+    </button>
+    <script src="confetti.js"></script>
+    <!-- Confetti  JS-->
+    <script>
+        function CeleButton()
+        {
+            document.getElementById("Image").style.display = "block";
+            document.getElementById("Gif").style.display = "none";         
+            confetti.start() 
+            setTimeout(function() {
+                confetti.stop()
+                setTimeout(function() {
+                    document.getElementById("Gif").style.display = "block";  
+                    document.getElementById("Image").style.display = "none";
+                }, 2000);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
